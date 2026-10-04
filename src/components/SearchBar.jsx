@@ -36,7 +36,7 @@ const SearchBar = ({ onSearch }) => {
         </svg>
         <button
           type="submit"
-          className="absolute right-2 px-4 py-1.5 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 active:scale-95 transition-all duration-200 shadow-md cursor-pointer"
+          className="absolute right-2 px-4 py-1.5 bg-color-button text-text-seconday font-medium rounded-xl hover:bg-[#7a7588] active:scale-95 transition-all duration-200 shadow-md cursor-pointer"
         >
           Search
         </button>

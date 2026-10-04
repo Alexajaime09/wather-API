@@ -13,7 +13,7 @@ export const useWeather = (defaultCity = "Mexico") => {
     setLoading(true);
     setError(null);
     try {
-      const current = await getCurrentWeather(setCity, currentUnit);
+      const current = await getCurrentWeather(searchCity, currentUnit);
 
       setWeatherData(current);
 

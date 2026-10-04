@@ -1,4 +1,4 @@
-const API_KEY = meta.env.VITE_OPENWEATHER_API_KEY;
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 
@@ -6,6 +6,7 @@ export const getCurrentWeather = async (city, units = "metrics") => {
   if (!API_KEY) {
     throw new Error("environment variables not available");
   }
+  console.log("de watherApi", API_KEY, "units", units, "city", city);
   const response = await fetch(
     `${BASE_URL}/weather?q=${encodeURIComponent(city)}&units=${units}&appid=${API_KEY}&lang=en`,
   );
