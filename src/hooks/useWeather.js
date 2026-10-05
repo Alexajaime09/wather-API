@@ -15,6 +15,10 @@ export const useWeather = (defaultCity = "Mexico") => {
     try {
       const current = await getCurrentWeather(searchCity, currentUnit);
 
+      if (!current || !current.coord) {
+        throw new Error("City not found");
+      }
+
       setWeatherData(current);
 
       const forecast = await getForecast(

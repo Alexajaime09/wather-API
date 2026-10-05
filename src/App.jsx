@@ -24,7 +24,7 @@ function App() {
           <h1 className="text-4xl sm:text-5xl font-medium text-white tracking-tight drop-shadow-sm ">
             Weather Forecast
           </h1>
-          <p className="text-[#dedede] mt-2 font-medium">
+          <p className="text-text- mt-2 font-medium">
             check the time of your city or any other
           </p>
         </header>
