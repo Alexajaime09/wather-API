@@ -1,16 +1,45 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+it's a weather forescasting app built with React. The API to create this project is OpenWeatherMap API to fetch current weather and 5-day forecast for any city
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Link of website
+https://splendorous-stardust-3173d4.netlify.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+-Search weather by city name
+-View information of the weather as: temperature, humidity, wind speed
+-Select Celsius or Fahrenheit throught a toggle
+-Responsive design
+-If a city dosen't exist show a messsage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##Tech Stack
+
+- **React** + **Vite**
+- **Tailwind**
+- **Netlify Functions** (to safely handle the API key)
+- **OpenWeatherMap API**
+
+## Project Structure
+```text
+weather/
+├── netlify/
+│   └── functions/       # Serverless function for weather API
+├── src/
+│   ├── components/      # UI Components (Search, WeatherDisplay, Forecast)
+│   ├── App.jsx          # Main state & logic
+│   └── index.css        # Styles
+├── netlify.toml         # Local & deployment config
+└── package.json
+
+
+
+
+How to run Locally
+
+Clone the repo and install dependencies
+Add your API key in a .env file at the root
+Start the server => npm run netlify:dev
+Open http://localhost:8888 in your browser.
